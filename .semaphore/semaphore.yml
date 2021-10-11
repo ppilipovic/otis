@@ -5,12 +5,15 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: Unit tests
+  - name: Tests
     task:
       jobs:
-        - name: running integration tests
+        - name: Unit tests
           commands:
-            - running integration tests
+            - echo 'running unit tests'
+        - name: Integration tests
+          commands:
+            - echo 'running integration tests'
       prologue:
         commands:
           - checkout
